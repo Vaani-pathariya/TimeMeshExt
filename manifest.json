@@ -1,0 +1,13 @@
+{
+    "name":"TimeMesh",
+    "version":"0.0.1",
+    "manifest_version":3,
+    "action":{
+        "default_popup":"main.html",
+        "default_icon":"logo_128.png"
+    },
+    "icons":{
+        "128":"logo_128.png"
+    },
+    "permissions":["activeTab"]
+}

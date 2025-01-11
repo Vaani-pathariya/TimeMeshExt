@@ -20,11 +20,15 @@
       <button onclick="stopTimer()">Stop</button>
       <button onclick="resetTimer()">Reset</button>
       <label for="Description">Description(optional)</label>
+      <select id ="descriptionDropdown">
+        <option>Select from Previous</option>
+      </select>
       <input type="text" name="Description" id="Description"/>
       <div>Break Timer</div>
       <div class="timer" id="breakTimer">00:00:00</div>
       <a href="#"><button>Analytics</button></a>
       <button onclick="logout()">logout</button>
+      <button onclick="stopAudio()">Stop Audio</button>
     </div>
     <script src="script.js"></script>
   </body>

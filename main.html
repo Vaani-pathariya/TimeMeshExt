@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TimeMesh</title>
-</head>
-<body>
-    <div>Hi this is Time Meshi</div>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+        const token = localStorage.getItem("token");
+        if (!token){
+            window.location.href="/user.html"
+        }
+    </script>
+    <div class="back">
+      <div>Work Timer</div>
+      <div class="timer" id="workTimer">00:00:00</div>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop</button>
+      <button onclick="resetTimer()">Reset</button>
+      <label for="Description">Description(optional)</label>
+      <input type="text" name="Description" id="Description"/>
+      <div>Break Timer</div>
+      <div class="timer" id="breakTimer">00:00:00</div>
+      <a href="#"><button>Analytics</button></a>
+      <button onclick="logout()">logout</button>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

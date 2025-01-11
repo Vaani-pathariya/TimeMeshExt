@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+}
+.timer {
+    background-color: white;
+    margin-bottom: 5px;
+}
+.back{
+    background-color: aqua;
+    padding: 10px;
+    text-align: center;
+}

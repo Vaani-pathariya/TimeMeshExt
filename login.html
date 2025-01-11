@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const token = localStorage.getItem("token")
+        if (token){
+            window.location.href ="/main.html"
+        }
+    </script>
+    <lable for="email">Email</lable>
+    <input type="text" name="email" id="email"/>
+    <lable for="password">Password</lable>
+    <input type="password" name="password" id="password"/>
+    <button onclick="login()">login</button>
+    <script src="login.js"></script>
+</body>
+</html>

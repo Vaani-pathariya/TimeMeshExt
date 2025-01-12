@@ -14,7 +14,7 @@ const updateDesc=()=>{
 }
 const initialDescriptions=async()=>{
     try{
-        const response = await fetch("http://localhost:8000/time/desc",{
+        const response = await fetch("https://timemeshbackend.onrender.com/time/desc",{
             method: "GET",
             headers:{
                 "Content-Type":"Application/json",
@@ -68,7 +68,7 @@ const sendTime = async (duration) => {
     description,
   };
   try {
-    const response = await fetch("http://localhost:8000/time/add", {
+    const response = await fetch("https://timemeshbackend.onrender.com/time/add", {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",

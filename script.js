@@ -11,6 +11,12 @@ const updateDesc=()=>{
         option.innerText=desc
         dropdown.appendChild(option);
     })
+    dropdown.addEventListener("change",(event)=>{
+      let selectedDesc = event.target.value;
+      if (selectedDesc!=="Select from Previous"){
+        document.getElementById("Description").value=selectedDesc
+      }
+    })
 }
 const initialDescriptions=async()=>{
     try{

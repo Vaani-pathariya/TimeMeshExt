@@ -30,6 +30,13 @@
       <button onclick="logout()">logout</button>
       <button onclick="stopAudio()">Stop Audio</button>
     </div>
+    <div class="back">
+      <div id="timedTimer" class="timer">00:00:00</div>
+      <input type="number" placeholder="hours" min ="0" id="timedHours">
+      <input type="number" placeholder="minutes" min="0" max="59" id="timedMinutes">
+      <button onclick="startTimedTimer()">Start Timer</button>
+      <button onclick="stopTimedTimer()">Stop Timer</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@ let breakTime = 0;
 let clockState = "start";
 let descriptions = []
 const audio = new Audio("audio.mp3");
+const audio2= new Audio("audio2.mp3");
 const updateDesc=()=>{
     const dropdown = document.getElementById("descriptionDropdown")
     descriptions.forEach(desc=>{
@@ -153,3 +154,25 @@ const logout = () => {
   localStorage.removeItem("token");
   window.location.href = "/user.html";
 };
+const startTimedTimer=()=>{
+  const hours = document.getElementById("timedHours").value;
+  const minutes = document.getElementById("timedMinutes").value;
+  document.getElementById("timedHours").value=0
+  document.getElementById("timedMinutes").value=0;
+  let seconds = minutes*60+ hours*3600;
+  startTimer();
+  const timer = setInterval(()=>{
+    if (seconds>0){
+      seconds--
+      increment(seconds,"timedTimer")
+    }
+    else {
+      audio2.play()
+      clearInterval(timer)
+    }
+  },1000)
+}
+const stopTimedTimer=()=>{
+  audio2.pause();
+  audio2.currentTime = 0;
+}
